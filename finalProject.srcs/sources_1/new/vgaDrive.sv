@@ -7,12 +7,12 @@
 //rev: draws some rectangle
 //test to see if it works or not
 //sw works to make a color
-module vgaTop (clk,vgaRed,vgaGreen,vgaBlue,Hsync,Vsync,sw);
+module vgaTop (clk,vgaRed,vgaGreen,vgaBlue,Hsync,Vsync,sw,x,y);
     input clk;
     input [11:0] sw;
     output logic [3:0] vgaRed, vgaBlue, vgaGreen;
     output Hsync,Vsync;
-    logic [9:0] x,y;
+    output logic [9:0] x,y;
     logic vgaclk,blank;
 
     vgaClocker vclk (.clk(clk),.vgaclk(vgaclk));
