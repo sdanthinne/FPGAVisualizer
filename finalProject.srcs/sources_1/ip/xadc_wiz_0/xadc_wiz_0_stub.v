@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Jun  3 15:48:01 2019
+// Date        : Tue Jun  4 22:29:43 2019
 // Host        : DESKTOP-11E4QCK running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub {C:/Users/Sebastien
 //               Danthinne/Documents/Documents/vivadoProjects/finalProject/finalProject.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v}

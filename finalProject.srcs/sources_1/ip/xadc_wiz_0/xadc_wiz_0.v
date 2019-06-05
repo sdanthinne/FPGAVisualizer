@@ -47,7 +47,7 @@
 // PART OF THIS FILE AT ALL TIMES.
 `timescale 1ns / 1 ps
 
-(* CORE_GENERATION_INFO = "xadc_wiz_0,xadc_wiz_v3_3_6,{component_name=xadc_wiz_0,enable_axi=false,enable_axi4stream=false,dclk_frequency=10,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=true,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=false,enable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}" *)
+(* CORE_GENERATION_INFO = "xadc_wiz_0,xadc_wiz_v3_3_6,{component_name=xadc_wiz_0,enable_axi=false,enable_axi4stream=false,dclk_frequency=150,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=true,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=false,enable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}" *)
 
 
 module xadc_wiz_0
@@ -146,9 +146,9 @@ module xadc_wiz_0
           assign aux_channel_p[15] = 1'b0;
           assign aux_channel_n[15] = 1'b0;
 XADC #(
-        .INIT_40(16'h8016), // config reg 0
+        .INIT_40(16'h8416), // config reg 0
         .INIT_41(16'h310F), // config reg 1
-        .INIT_42(16'h0200), // config reg 2
+        .INIT_42(16'h1E00), // config reg 2
         .INIT_48(16'h0100), // Sequencer channel selection
         .INIT_49(16'h0000), // Sequencer channel selection
         .INIT_4A(16'h0000), // Sequencer Average selection

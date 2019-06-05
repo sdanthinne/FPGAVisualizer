@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 //testing module to show output of the xadc to the seven segment display
 
-module top(vpin,vnin,seg,an,clk,led);
+module adcTop(vpin,vnin,seg,an,clk,led);
     input vpin,vnin,clk;
     //logic vnin = 1'b0;
     output [6:0] seg;

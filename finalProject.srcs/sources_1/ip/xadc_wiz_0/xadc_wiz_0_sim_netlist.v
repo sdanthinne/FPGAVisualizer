@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Jun  3 15:48:01 2019
+// Date        : Tue Jun  4 22:29:43 2019
 // Host        : DESKTOP-11E4QCK running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {C:/Users/Sebastien
 //               Danthinne/Documents/Documents/vivadoProjects/finalProject/finalProject.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_sim_netlist.v}
@@ -72,9 +72,9 @@ module xadc_wiz_0
 
   (* BOX_TYPE = "PRIMITIVE" *) 
   XADC #(
-    .INIT_40(16'h8016),
+    .INIT_40(16'h8416),
     .INIT_41(16'h310F),
-    .INIT_42(16'h0200),
+    .INIT_42(16'h1E00),
     .INIT_43(16'h0000),
     .INIT_44(16'h0000),
     .INIT_45(16'h0000),
