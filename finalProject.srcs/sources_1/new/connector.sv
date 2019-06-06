@@ -32,13 +32,14 @@
 //endmodule
 
 
-module finalFSM(clk,vgaRed,vgaGreen,vgaBlue,Hsync,Vsync,vpin,vnin,btnC,sw);
+module finalFSM(clk,vgaRed,vgaGreen,vgaBlue,Hsync,Vsync,vpin,vnin,btnC,sw,ja);
 input clk,vpin,vnin,btnC;
 input [11:0] sw;
 //output [15:0] led;
 output [3:0] vgaRed, vgaGreen, vgaBlue;
 output Hsync,Vsync;
-logic ready;
+output logic ja;
+logic ready,sloclk;
 logic [11:0] data_out;
 logic [11:0] data_out_mem;
 logic [11:0] data_div;
@@ -50,9 +51,18 @@ state cs,ns;
 data_reader d1 (clk, vpin,vnin,data_out,ready);
 //sw is the color bus, with 12 bits. 4 bits per RGB color
 vgaTop vga1 (.clk(clk),.vgaRed(vgaRed),.vgaGreen(vgaGreen),.vgaBlue(vgaBlue),.Hsync(Hsync),.Vsync(Vsync),.sw(disp_out),.x(x),.y(y));
-
-
-
+ reg [15:0] cnt;
+initial begin
+        cnt = 16'd0;
+        sloclk = 1'b0;
+        ja = 1'b0;
+    end
+always @(posedge clk)
+        {sloclk, cnt} <= cnt + 16'h1;
+ always @ (posedge sloclk)
+         ja <= ~ja;
+        
+// ja = clk;
 
 initial begin
     cs = B;
