@@ -32,9 +32,9 @@
 //endmodule
 
 
-module finalFSM(clk,vgaRed,vgaGreen,vgaBlue,Hsync,Vsync,vpin,vnin,btnC);
+module finalFSM(clk,vgaRed,vgaGreen,vgaBlue,Hsync,Vsync,vpin,vnin,btnC,sw);
 input clk,vpin,vnin,btnC;
-//input [15:0] sw;
+input [11:0] sw;
 //output [15:0] led;
 output [3:0] vgaRed, vgaGreen, vgaBlue;
 output Hsync,Vsync;
@@ -74,9 +74,9 @@ begin
         //display some color
             data_div = data_out_mem/100;
             ns = B;
-            if(x<data_out_mem)
+            if(y<data_out_mem)
             begin
-            disp_out = 12'b100010100100;
+            disp_out = sw;
             end
             else
             begin
