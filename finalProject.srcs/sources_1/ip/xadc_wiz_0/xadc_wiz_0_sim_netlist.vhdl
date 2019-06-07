@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Tue Jun  4 22:29:43 2019
+-- Date        : Fri Jun  7 04:00:44 2019
 -- Host        : DESKTOP-11E4QCK running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim {C:/Users/Sebastien
 --               Danthinne/Documents/Documents/vivadoProjects/finalProject/finalProject.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_sim_netlist.vhdl}
@@ -51,7 +51,7 @@ inst: unisim.vcomponents.XADC
     generic map(
       INIT_40 => X"8416",
       INIT_41 => X"310F",
-      INIT_42 => X"1E00",
+      INIT_42 => X"6100",
       INIT_43 => X"0000",
       INIT_44 => X"0000",
       INIT_45 => X"0000",
