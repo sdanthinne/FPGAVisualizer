@@ -4,8 +4,7 @@
 
 //attempt at a vga driver
 
-//rev: draws some rectangle
-//test to see if it works or not
+
 //sw works to make a color
 module vgaTop (clk,vgaRed,vgaGreen,vgaBlue,Hsync,Vsync,sw,x,y);
     input clk;
@@ -70,7 +69,8 @@ endmodule
 
 
 // this module created a clock with the frequency 25.175MHz
-//tested, seems to be creating a clock with freq of 25 MHz, not 25.175.
+//tested, seems to be creating a clock with freq of 25 MHz, not 25.175, could need more resolution 
+//with more spill-over bits in the clock counter.
 module vgaClocker  (clk,vgaclk);
     input clk;
     output logic vgaclk;
@@ -105,6 +105,9 @@ endmodule
 //                             VMAX = VACTIVE+VFP+VSYN+VBP)
 //for 640*480
 
+
+// this module is what controlls the VGA timing, and outputs the hsync and vsync for a respective monitor size, 
+//here it is 640x480
 module vgaController 
 #(parameter
 							HACTIVE = 10'd640,
@@ -128,7 +131,7 @@ module vgaController
         
         // counters for horizontal and vertical positions
         // x starts at 0 and goes to 639 for screen values
-        //y goes 479
+        //y goes 0-479
         always @(posedge vgaclk) begin
         x++;
         if (x == HMAX) begin
