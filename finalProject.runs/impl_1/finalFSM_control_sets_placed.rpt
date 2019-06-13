@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Jun  7 04:01:45 2019
+| Date         : Fri Jun  7 21:52:53 2019
 | Host         : DESKTOP-11E4QCK running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file finalFSM_control_sets_placed.rpt
 | Design       : finalFSM
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     5 |
-| Unused register locations in slices containing registers |    29 |
+| Number of unique control sets                            |     6 |
+| Unused register locations in slices containing registers |    21 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,7 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      9 |            1 |
+|      8 |            2 |
 |     10 |            2 |
 |     12 |            1 |
 |    16+ |            1 |
@@ -47,26 +47,27 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              75 |           22 |
+| No           | No                    | No                     |              83 |           22 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              22 |            9 |
+| No           | Yes                   | No                     |              22 |           10 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              10 |            4 |
+| Yes          | Yes                   | No                     |              10 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------+------------------------+------------------------+------------------+----------------+
-|      Clock Signal      |      Enable Signal     |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
-+------------------------+------------------------+------------------------+------------------+----------------+
-|  clkd2                 |                        |                        |                4 |              9 |
-|  vgaRed_reg[3]_i_2_n_0 |                        | vga1/vcon/x[9]_i_1_n_0 |                4 |             10 |
-|  vgaRed_reg[3]_i_2_n_0 | vga1/vcon/x[9]_i_1_n_0 | vga1/vcon/y[9]_i_1_n_0 |                4 |             10 |
-|  vgaRed_reg[3]_i_2_n_0 |                        | vga1/vcon/y_reg[7]_0   |                5 |             12 |
-|  clk_IBUF_BUFG         |                        |                        |               18 |             66 |
-+------------------------+------------------------+------------------------+------------------+----------------+
++-------------------------+------------------------+------------------------+------------------+----------------+
+|       Clock Signal      |      Enable Signal     |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++-------------------------+------------------------+------------------------+------------------+----------------+
+|  clkd2                  |                        |                        |                2 |              8 |
+|  min_val_reg[7]_i_1_n_0 |                        |                        |                2 |              8 |
+|  vgaRed_reg[3]_i_2_n_0  |                        | vga1/vcon/x[9]_i_1_n_0 |                5 |             10 |
+|  vgaRed_reg[3]_i_2_n_0  | vga1/vcon/x[9]_i_1_n_0 | vga1/vcon/y[9]_i_1_n_0 |                3 |             10 |
+|  vgaRed_reg[3]_i_2_n_0  |                        | vga1/vcon/y_reg[9]_0   |                5 |             12 |
+|  clk_IBUF_BUFG          |                        |                        |               18 |             67 |
++-------------------------+------------------------+------------------------+------------------+----------------+
 
 

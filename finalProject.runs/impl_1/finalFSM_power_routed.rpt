@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Fri Jun  7 04:02:08 2019
+| Date             : Fri Jun  7 21:53:16 2019
 | Host             : DESKTOP-11E4QCK running 64-bit major release  (build 9200)
 | Command          : report_power -file finalFSM_power_routed.rpt -pb finalFSM_power_summary_routed.pb -rpx finalFSM_power_routed.rpx
 | Design           : finalFSM
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.077        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.006        |
+| Dynamic (W)              | 0.005        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      221 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       65 |     20800 |            0.31 |
-|   CARRY4       |    <0.001 |       20 |      8150 |            0.25 |
-|   Register     |    <0.001 |      107 |     41600 |            0.26 |
+| Slice Logic    |    <0.001 |      229 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       64 |     20800 |            0.31 |
+|   CARRY4       |    <0.001 |       22 |      8150 |            0.27 |
+|   Register     |    <0.001 |      115 |     41600 |            0.28 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       11 |       --- |             --- |
+|   Others       |     0.000 |       13 |       --- |             --- |
 | Signals        |    <0.001 |      181 |       --- |             --- |
-| I/O            |     0.001 |       29 |       106 |           27.36 |
+| I/O            |     0.002 |       29 |       106 |           27.36 |
 | XADC           |     0.002 |        1 |       --- |             --- |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.077 |          |           |                 |
@@ -142,7 +142,7 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| finalFSM |     0.006 |
+| finalFSM |     0.005 |
 |   d1     |     0.002 |
 |     xadc |     0.002 |
 +----------+-----------+
